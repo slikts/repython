@@ -3,12 +3,14 @@
 import os
 from distutils.core import setup
 
+import repython
+
 
 def read(filename):
     return open(os.path.join(os.path.dirname(__file__), filename)).read()
 
 setup(name='repython',
-    version='0.1',
+    version=repython.__version__,
     description='Tool to restart commands based on filesystem changes',
     author='Reinis Ivanovs',
     author_email='dabas@untu.ms',

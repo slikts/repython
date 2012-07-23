@@ -8,6 +8,10 @@ import twiggy
 import pyinotify
 
 
+__version_info__ = (0, 1, 1)
+__version__ = '.'.join(map(str, __version_info__))
+
+
 class Repython(object):
     """Runs a command, monitors files for changes and restarts the
     command if changes are found
