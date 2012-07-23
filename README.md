@@ -24,18 +24,18 @@ You can install the repython module using:
 
 repython is also available from the Cheeseshop:
 
-	$ pip install repython
+    $ pip install repython
 
 Or using setuptools:
 
-	$ easy_install repython
+    $ easy_install repython
 
 Usage
 -----
 
 Basic example:
 
-	$ python -m repython "python example.py"
+    $ python -m repython "python example.py"
 
 This would open the command in a subprocess and recursively monitor
 the current working directory for any changed files matching the *.py
@@ -52,7 +52,7 @@ trigger restarting the run command.
 The `-d` or `--directory` arguments allow monitoring other directories
 than the current working directory. It can be used like this:
 
-	$ python -m repython "python example.py" -d . ~/example
+    $ python -m repython "python example.py" -d . ~/example
 
 This command would make repython recursively monitor (i.e., including
 subdirectories) both the working directory and the
@@ -64,7 +64,7 @@ to suppress repython output.
 
 For more details please see:
 
-	$ python -m repython --help
+    $ python -m repython --help
 
 Known issues
 ------------
