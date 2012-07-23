@@ -7,20 +7,16 @@ running program. For instance, Django uses a similar but more
 sophisticated method to reload its source code when it detects
 a change.
 
-repython uses the [pyinotify] [1] library to make monitoring for changes
+repython uses the pyinotify library to make monitoring for changes
 efficient compared to just polling the filesystem.
-
-	[1]: https://github.com/seb-m/pyinotify "github.com/seb-m/pyinotify"
 
 Installation
 ------------
 
 Dependencies:
 
- * [pyinotify] [1]
- * [twiggy] [2]
-
-	[2]: http://hg.wearpants.org/twiggy/ "Twiggy"
+ * [pyinotify](https://github.com/seb-m/pyinotify)
+ * [twiggy](http://hg.wearpants.org/twiggy/)
 
 You can install the repython module using:
 
@@ -48,7 +44,10 @@ filename pattern (default behavior).
 repython is not limited to running Python programs, so a command like
 this should work as well:
 
-    $ python -m repython "ruby example.rb" -p "*.rb"
+    $ python -m repython "ruby example.rb" -p "*.rb" "*.txt"
+
+The `-p` or `--pattern` arguments determine which file changes
+trigger restarting the run command.
 
 The `-d` or `--directory` arguments allow monitoring other directories
 than the current working directory. It can be used like this:
@@ -67,3 +66,10 @@ For more details please see:
 
 	$ python -m repython --help
 
+Known issues
+------------
+
+[Python issue #15433](http://bugs.python.org/issue15433) causes the
+argument order to be wrong in the generated usage instructions
+(shown when using the `--help` argument). The command argument should
+come before the optional arguments for the tool to work.
