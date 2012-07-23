@@ -22,7 +22,7 @@ You can install the repython module using:
 
     $ python setup.py install
 
-repython is also available from Cheese Shop:
+repython is also available from the Cheeseshop:
 
 	$ pip install repython
 
@@ -54,13 +54,13 @@ than the current working directory. It can be used like this:
 
 	$ python -m repython "python example.py" -d . ~/example
 
-This command would make repython recursively (i.e., including
-subdirectories) monitor both the working directory and the
+This command would make repython recursively monitor (i.e., including
+subdirectories) both the working directory and the
 `~/example` directory.
 
 The `-v` or `--verbose` argument can be used to get more detailed
 output from repython, and the `-q` or `--quiet` argument can be used
-to suppress all output.
+to suppress repython output.
 
 For more details please see:
 
@@ -69,7 +69,7 @@ For more details please see:
 Known issues
 ------------
 
-[Python issue #15433](http://bugs.python.org/issue15433) causes the
+[Python issue #9338](http://bugs.python.org/issue9338) causes the
 argument order to be wrong in the generated usage instructions
-(shown when using the `--help` argument). The command argument should
+(shown when using the `--help` argument). The `command` argument should
 come before the optional arguments for the tool to work.
