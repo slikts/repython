@@ -31,4 +31,5 @@ setup(name='repython',
         'Topic :: Utilities',
     ],
     install_requires=['pyinotify', 'twiggy'],
+    data_files=[('docs', ['README.md']),],
 )
